@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3eeee;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .drop
+{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+    25px 35px 20px rgba(0,0,0,0.05),
+    25px 30px 30px rgba(0,0,0,0.05),
+    inset -20px -20px 25px rgba(255,255,255,0.9);
+    transition: 0.5s;
+    border-radius:40% 60% 32% 68% / 43% 37% 63% 57%  ;
+}
+.container .drop::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    top: 60px;
+    left: 70px;
+    border-radius: 50%;
+    opacity: 1;
+}
+.container .drop::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    top: 90px;
+    left: 90px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.container .drop .content
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 15px;
+}
+.container .drop .content h2{
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.container .drop .content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .drop .content form .box
+{
+    position: relative;
+    width: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.05),
+    15px 15px 10px rgba(0,0,0,0.05),
+    15px 10px 15px rgba(0,0,0,0.05)
+    ;
+    border-radius: 25px;
+}
+.container .drop .content form .box input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 15px;
+}
+.container .drop .content form .box::before
+{
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 50%;
+    width: 65%;
+    height: 5px;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.9);
+}
+.container .drop .content form .box input[type="submit"]
+{
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+.container .drop .content form .box:last-child
+{ 
+   
+    width: 150px;
+    background: blue;
+}
